@@ -1,0 +1,28 @@
+VICTIM:
+  DATASET: 'Indoor67'
+  DATA_ROOT: '/home/ankita/mnt/vision03_datasets/indoor67'
+  ARCH: 'vit_l_16_21k'
+  PATH: 'victims/victims_indoor67/vit_l_16_21k/checkpoint.pth.tar'
+THIEF:
+  ARCH: 'vit_l_16_21k'
+  DATA_ROOT: '/home/ankita/mnt/vision03_datasets/Imagenet/ILSVRC/Data/CLS-LOC/train'
+  DATASET: 'imagenet_full'
+  SUBSET: 128116
+ACTIVE:
+  BUDGET: 5000
+  METHOD: 'random'
+  CYCLES: 1
+  USE_PRETRAINED: False
+  CUTMIX_PROB: 0.0
+  LA: False
+  TRO: 1.0
+TRIALS: 1
+RNG_SEED: 1
+METHOD_NAME: 'fft'
+OUT_DIR: 'results'
+TRAIN:
+  EPOCH: 100 
+  OPTIMIZER: 'SGD'
+  LR: 0.02
+  BATCH: 64
+  MILESTONES: [50, 120, 180, 240, 300, 360, 420]

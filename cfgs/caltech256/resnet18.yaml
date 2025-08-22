@@ -1,0 +1,29 @@
+VICTIM:
+  ARCH: 'resnet18'
+  DATASET: 'Caltech256'
+  DATA_ROOT: '/home/ankita/scratch/Datasets'
+  PATH: 'victims/victims_caltech256/resnet18/checkpoint.pth.tar'
+THIEF:
+  ARCH: 'resnet18'
+  DATA_ROOT: '/home/ankita/scratch/Datasets/Imagenet/ILSVRC/Data/CLS-LOC/train'
+  DATASET: 'imagenet_full'
+  SUBSET: 128116
+ACTIVE:
+  BUDGET: 5000
+  METHOD: 'random'
+  CYCLES: 1
+  USE_PRETRAINED: True
+  PRETRAINED_PATH : '/home/ankita/scratch/MSA_results/ckpts/resnet18-imagenet1k.pth'
+  CUTMIX_PROB: 0.0
+  LA: False
+  TRO: 1.0
+TRIALS: 1
+RNG_SEED: 1
+METHOD_NAME: 'fft'
+OUT_DIR: 'results'
+TRAIN:
+  EPOCH: 200 
+  OPTIMIZER: 'SGD'
+  LR: 0.001
+  BATCH: 128
+  MILESTONES: [50, 120, 180, 240, 300, 360, 420]

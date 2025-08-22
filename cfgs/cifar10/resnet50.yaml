@@ -1,0 +1,30 @@
+VICTIM:
+  ARCH: 'resnet50'
+  DATASET: 'CIFAR10'
+  DATA_ROOT: '/home/ankita/scratch/Datasets/' 
+  PATH: '/victims/victims_cifar10/resnet50/checkpoint.pth.tar'
+THIEF:
+  ARCH: 'resnet50'
+  DATASET: 'imagenet32'
+  DATA_ROOT: /home/ankita/scratch/Datasets/Imagenet32/train'
+  SUBSET: 128116
+  LOAD_LABELED_SET: False
+ACTIVE:
+  BUDGET: 5000
+  METHOD: 'random'
+  CYCLES: 1
+  USE_PRETRAINED: False
+  CUTMIX_PROB: 0.0
+  LA: False
+  TRO: 1.0
+TRIALS: 1
+RNG_SEED: 1
+METHOD_NAME: 'fft'
+OUT_DIR: 'results'
+TRAIN:
+  EPOCH: 100 
+  OPTIMIZER: 'SGD'
+  LR: 0.001 
+  BATCH: 128
+  MILESTONES: [50, 120, 180, 240, 300, 360, 420]
+

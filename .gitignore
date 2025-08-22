@@ -1,0 +1,45 @@
+# VS Code
+.vscode/
+
+# Jupyter Notebook
+*.ipynb_checkpoints/
+
+# Obsolete code directories
+archive/
+
+# Trained models
+*.hdf5
+ViT-Pytorch/cifar10_downstreamed_models
+
+#Datasets
+ViT-Pytorch/cifar10_dataset
+
+# Other directories
+/home/deepankar_v/scratch/model_stealing_encoders_copy/MSA/zeroshotthief.pt
+MSA/archives/
+MSA/data
+MSA/results
+MSA/.results
+MSA/ckpts/
+MSA/steal_augment_with_validation_v3.Pycache
+MSA/hard_to_soft.py
+MSA/output_logs/
+MSA/zeroshotthief.pt/
+MSA/ViT_B_16_Imagenet1k.pth
+clip/
+wise-ft/cache
+wise-ft/data
+wise-ft/images
+wise-ft/models
+victim_models/
+outputs_ankita
+
+MSA/pretrained_vit_models/
+# Pycache
+__pycache__/
+
+
+#Defenses
+adaptive_misinformation/admis/defender/models/
+
+git_copy/
